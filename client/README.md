@@ -1,29 +1,29 @@
-# 🚀 FixMate
+#  FixMate
 
 **FixMate** is a full-stack web application that connects users with experts for real-time problem-solving through video calls and instant support.
 
 ---
 
-## ✨ Features
+##  Features
 
-* 🔐 User & Expert Authentication
-* 📝 Simple Help Request Form
-* 📞 Real-time Video Calling (WebRTC / ZegoCloud)
-* 📊 Dashboard for managing requests
-* ⚡ Fast & responsive UI
+*  User & Expert Authentication
+*  Simple Help Request Form
+*  Real-time Video Calling (WebRTC / ZegoCloud)
+*  Dashboard for managing requests
+*  Fast & responsive UI
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** React, Tailwind CSS
 * **Backend:** Node.js, Express
 * **Realtime:** WebRTC / ZegoCloud
-* **Database:** (Add your DB here — MongoDB / Firebase)
+* **Database:** (MongoDB)
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 FixMate/
@@ -33,16 +33,16 @@ FixMate/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
-### 1️⃣ Clone the repository
+### 1️ Clone the repository
 
 ```
 git clone https://github.com/Yashita16/FixMate.git
 cd FixMate
 ```
 
-### 2️⃣ Install dependencies
+### 2️ Install dependencies
 
 #### For client
 
@@ -62,7 +62,7 @@ npm start
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 * Users can sign up/login
 * Submit a help request
@@ -71,27 +71,27 @@ npm start
 
 ---
 
-## 🎯 Future Improvements
+##  Future Improvements
 
-* 💬 Chat feature
-* ⭐ Rating system for experts
-* 📅 Appointment scheduling
-* 💳 Payment integration
+*  Chat feature
+*  Rating system for experts
+*  Appointment scheduling
+*  Payment integration
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to fork this repo and submit a pull request.
 
 ---
 
-## 📌 Author
+##  Author
 
 **Yashita Gupta**
 
 ---
 
-## ⭐ Show your support
+##  Show your support
 
-If you like this project, give it a ⭐ on GitHub!
+If you like this project, give it a star on GitHub!
