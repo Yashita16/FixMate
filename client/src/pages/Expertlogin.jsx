@@ -14,7 +14,7 @@ const Expertlogin = () => {
    
        <div className='min-h-screen bg-primary-background flex items-center justify-center'>
 
-        <div className='flex flex-col items-center mx-auto bg-white h-[78vh] w-[90%] sm:w-[400px] rounded-2xl shadow-lg px-6'>
+        <div className='flex flex-col items-center mx-auto bg-white h-[85vh] w-[90%] sm:w-[400px] rounded-2xl shadow-lg px-6'>
 
           
         
@@ -32,7 +32,7 @@ const Expertlogin = () => {
            </div> : 
            <div className='flex flex-col items-center mt-8 gap-4'>
             <input type="text" placeholder='Enter your Name' className='border rounded-lg px-3 py-2 border-gray-300 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue' required/>
-            <input type="email" placeholder='Enter your Email' className='border rounded-lg px-3 py-2 border-gray-300 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue' required />
+            <input type="email" placeholder='Enter your Email' className='border rounded-lg px-3 py-2 border-gray-300 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue required'  />
           
             <select name="" id="" className='border border-gray-300 rounded-lg px-2 py-2 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue text-gray-500' required>
             <option value="">Select your expertise type</option>
@@ -45,6 +45,7 @@ const Expertlogin = () => {
             <option value="">House Helper</option>
             </select>
             <input type="password" placeholder='Enter your Password' className='border rounded-lg px-3 py-2 border-gray-300 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue' required/>
+            <input type="Number" placeholder='Enter Income per videocall' className='border rounded-lg px-3 py-2 border-gray-300 outline-none focus:border-primary-blue focus:ring-1 focus:ring-primary-blue' />
 
            </div> }
            

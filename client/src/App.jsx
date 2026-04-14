@@ -7,6 +7,7 @@ import UserDashboard from './pages/UserDashboard'
 import ExpertLogin from './pages/Expertlogin'
 import ExpertDashboard from './pages/ExpertDashboard'
 import ExportProfile from './pages/ExpertProfile'
+import UserPreviousIssue from './component/UserPreviousIssue'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
          <Route path='/expert-dashboard' element={<ExpertDashboard></ExpertDashboard>}></Route>
          <Route path='/expert/profile' element={<ExportProfile></ExportProfile>
          }></Route>
+        <Route path='/user-dashboard/previous-issues' element={<UserPreviousIssue></UserPreviousIssue>} ></Route>
         
 
         
