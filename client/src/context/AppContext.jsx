@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,10 +11,14 @@ export const useAppContext = ()=>{
 
 export const AppContextProvider=(props)=>{
 
+  const navigate = useNavigate();
+  const [isUserLogin , setIsUserLogin] = useState(false);
+  const [isExpertLogin , setIsExpertLogin]=useState(false);
+
 
   const [login , setLogin]=useState("");
 
-  const value={login, setLogin}
+  const value={login, setLogin , navigate , isUserLogin , setIsUserLogin , isExpertLogin , setIsExpertLogin}
     
 
    return(
