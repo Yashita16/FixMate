@@ -1,37 +1,57 @@
-import React from 'react'
-import Home from './pages/Home'
-import { Routes , Route } from 'react-router-dom'
-import Userlogin from './pages/Userlogin'
-import ForgetPass from './pages/ForgetPass'
-import UserDashboard from './pages/UserDashboard'
-import ExpertLogin from './pages/Expertlogin'
-import ExpertDashboard from './pages/ExpertDashboard'
-import ExportProfile from './pages/ExpertProfile'
-import UserPreviousIssue from './component/UserPreviousIssue'
+import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './routes/ProtectedRoute.jsx';
+import RoleRoute from './routes/RoleRoute.jsx';
 
-const App = () => {
-  return (
-    <div className=''>
-      <Routes>
-        <Route path='/' element={<Home></Home>}/>
-        <Route path='/user-login' element={<Userlogin></Userlogin>} />
-        <Route path='/forget-password' element={<ForgetPass></ForgetPass>}/>
-        <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>} ></Route>
-        <Route path='/videocall' ></Route>
-         <Route path='/expert-login' element={<ExpertLogin></ExpertLogin>} ></Route>
-         <Route path='/expert-dashboard' element={<ExpertDashboard></ExpertDashboard>}></Route>
-         <Route path='/expert/profile' element={<ExportProfile></ExportProfile>
-         }></Route>
-        <Route path='/user-dashboard/previous-issues' element={<UserPreviousIssue></UserPreviousIssue>} ></Route>
-        
+import Landing from './pages/Landing.jsx';
+import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
+import ForgotPassword from './pages/ForgotPassword.jsx';
+import ResetPassword from './pages/ResetPassword.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import ExpertListing from './pages/ExpertListing.jsx';
+import ExpertProfilePage from './pages/ExpertProfilePage.jsx';
+import IssueSubmission from './pages/IssueSubmission.jsx';
+import VideoCallRoom from './pages/VideoCallRoom.jsx';
+import Profile from './pages/Profile.jsx';
+import Notifications from './pages/Notifications.jsx';
+import ConsultationHistory from './pages/ConsultationHistory.jsx';
+import ExpertDashboard from './pages/ExpertDashboard.jsx';
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import NotFound from './pages/NotFound.jsx';
 
-        
-      </Routes>
-      
+const App = () => (
+  <Routes>
+    {/* Public */}
+    <Route path="/" element={<Landing />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/signup" element={<Signup />} />
+    <Route path="/forgot-password" element={<ForgotPassword />} />
+    <Route path="/reset-password/:token" element={<ResetPassword />} />
+    <Route path="/experts" element={<ExpertListing />} />
+    <Route path="/experts/:id" element={<ExpertProfilePage />} />
 
-      
-    </div>
-  )
-}
+    {/* Protected – any authenticated user */}
+    <Route element={<ProtectedRoute />}>
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/consultations" element={<ConsultationHistory />} />
+      <Route path="/issues/new" element={<IssueSubmission />} />
+      <Route path="/room/:consultationId" element={<VideoCallRoom />} />
+    </Route>
 
-export default App
+    {/* Expert only */}
+    <Route element={<RoleRoute roles={['expert']} />}>
+      <Route path="/expert/dashboard" element={<ExpertDashboard />} />
+    </Route>
+
+    {/* Admin only */}
+    <Route element={<RoleRoute roles={['admin']} />}>
+      <Route path="/admin/*" element={<AdminDashboard />} />
+    </Route>
+
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+);
+
+export default App;
