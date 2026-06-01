@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext.jsx';
-import { Button, Input } from '../components/common/index.jsx';
+import { Button, Input } from '../component/common/index.jsx';
 
 const Login = () => {
   const { login } = useAuth();

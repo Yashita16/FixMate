@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { FiSend, FiZap } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
-import { Button, Input, Textarea, Select } from '../components/common/index.jsx';
-import ExpertCard from '../components/expert/ExpertCard.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import { Button, Input, Textarea, Select } from '../component/common/index.jsx';
+import ExpertCard from '../component/expert/ExpertCard.jsx';
 import api from '../api/axios.js';
 
 const IssueSubmission = () => {

@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiVideo, FiMessageSquare, FiArrowRight, FiClock, FiPlusCircle } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
-import { CardSkeleton, EmptyState, StatusBadge } from '../components/common/index.jsx';
-import ConsultationCard from '../components/consultation/ConsultationCard.jsx';
+import { CardSkeleton, EmptyState, StatusBadge } from '../component/common/index.jsx';
+import ConsultationCard from '../component/consultation/ConsultationCard.jsx';
 import api from '../api/axios.js';
 
 const StatCard = ({ icon, label, value, color }) => (

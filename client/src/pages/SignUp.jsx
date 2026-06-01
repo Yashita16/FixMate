@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import { FiUser, FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext.jsx';
 import api from '../api/axios.js';
-import { Button, Input } from '../components/common/index.jsx';
+import { Button, Input } from '../component/common/index.jsx';
 
 const Signup = () => {
   const { login } = useAuth();

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiBell, FiCheck, FiTrash2 } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
-import { EmptyState, Button, Skeleton } from '../components/common/index.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import { EmptyState, Button, Skeleton } from '../component/common/index.jsx';
 import { useNotifications } from '../context/NotificationContext.jsx';
 import api from '../api/axios.js';
 

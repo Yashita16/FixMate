@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiVideo, FiShield, FiZap, FiStar, FiArrowRight, FiCheck } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
-import Footer from '../components/layout/Footer.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import Footer from '../component/layout/Footer.jsx';
 
 const features = [
   { icon: <FiZap className="text-yellow-400" size={22} />, title: 'Instant Matching', desc: 'Our algorithm matches you with the best expert in seconds based on your problem category.' },

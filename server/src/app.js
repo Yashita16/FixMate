@@ -25,6 +25,9 @@ const limiter = rateLimit({
   message: { success: false, message: 'Too many requests, please try again later.' }
 });
 app.use('/api/', limiter);
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5173',

@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { FiStar, FiClock, FiVideo, FiCheck, FiAlertCircle } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
-import { Button, StarRating, Modal, Textarea, FullPageSpinner } from '../components/common/index.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import { Button, StarRating, Modal, Textarea, FullPageSpinner } from '../component/common/index.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import api from '../api/axios.js';
 

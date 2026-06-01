@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
-import Navbar from '../components/layout/Navbar.jsx';
-import ConsultationCard from '../components/consultation/ConsultationCard.jsx';
-import { CardSkeleton, EmptyState, Modal, StarRating, Textarea, Button } from '../components/common/index.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import ConsultationCard from '../component/consultation/ConsultationCard.jsx';
+import { CardSkeleton, EmptyState, Modal, StarRating, Textarea, Button } from '../component/common/index.jsx';
 import api from '../api/axios.js';
 
 const STATUS_TABS = ['all', 'pending', 'accepted', 'completed', 'cancelled', 'rejected'];

@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { FiToggleLeft, FiToggleRight, FiVideo, FiStar, FiDollarSign, FiCheckCircle } from 'react-icons/fi';
-import Navbar from '../components/layout/Navbar.jsx';
-import { Button, CardSkeleton, EmptyState, StatusBadge } from '../components/common/index.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import { Button, CardSkeleton, EmptyState, StatusBadge } from '../component/common/index.jsx';
 import api from '../api/axios.js';
 
 const StatCard = ({ icon, label, value, sub, color }) => (

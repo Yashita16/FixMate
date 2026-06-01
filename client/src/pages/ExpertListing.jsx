@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../components/layout/Navbar.jsx';
-import Footer from '../components/layout/Footer.jsx';
-import ExpertCard from '../components/expert/ExpertCard.jsx';
-import ExpertFilter from '../components/expert/ExpertFilter.jsx';
-import { CardSkeleton, EmptyState, Button } from '../components/common/index.jsx';
+import Navbar from '../component/layout/Navbar.jsx';
+import Footer from '../component/layout/Footer.jsx';
+import ExpertCard from '../component/expert/ExpertCard.jsx';
+import ExpertFilter from '../component/expert/ExpertFilter.jsx';
+import { CardSkeleton, EmptyState, Button } from '../component/common/index.jsx';
 import api from '../api/axios.js';
 
 const ExpertListing = () => {

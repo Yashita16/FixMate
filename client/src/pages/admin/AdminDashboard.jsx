@@ -7,7 +7,7 @@ import {
   FiGrid, FiTag, FiMenu, FiLogOut
 } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext.jsx';
-import { Button, Skeleton, StatusBadge } from '../../components/common/index.jsx';
+import { Button, Skeleton, StatusBadge } from '../../component/common/index.jsx';
 import api from '../../api/axios.js';
 
 /* ─── Stat Card ─── */
