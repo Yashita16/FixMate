@@ -65,11 +65,10 @@ const Signup = () => {
                 ].map((opt) => (
                   <label
                     key={opt.value}
-                    className={`cursor-pointer p-3 rounded-lg border-2 transition-all text-center ${
-                      selectedRole === opt.value
-                        ? 'border-primary-500 bg-primary-500/10'
-                        : 'border-slate-600 hover:border-slate-500'
-                    }`}
+                    className={`cursor-pointer p-3 rounded-lg border-2 transition-all text-center ${selectedRole === opt.value
+                      ? 'border-primary-500 bg-primary-500/10'
+                      : 'border-slate-600 hover:border-slate-500'
+                      }`}
                   >
                     <input type="radio" value={opt.value} className="hidden" {...register('role')} />
                     <div className="text-base">{opt.label}</div>
