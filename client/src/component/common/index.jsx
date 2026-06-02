@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+
 // ── Button ──────────────────────────────────────────────────────────────────
 export const Button = ({ children, variant = 'primary', loading = false, className = '', ...props }) => {
   const base = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2.5 text-sm';
@@ -19,43 +20,95 @@ export const Button = ({ children, variant = 'primary', loading = false, classNa
 };
 
 // ── Input ────────────────────────────────────────────────────────────────────
-export const Input = ({ label, error, className = '', ...props }) => (
-  <div className="w-full">
-    {label && <label className="block text-sm font-medium text-slate-300 mb-1.5">{label}</label>}
-    <input
-      className={`input-field ${error ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''} ${className}`}
-      {...props}
-    />
-    {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
-  </div>
+import React, { forwardRef } from "react";
+
+export const Input = forwardRef(
+  ({ label, error, className = "", ...props }, ref) => (
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-slate-300 mb-1.5">
+          {label}
+        </label>
+      )}
+
+      <input
+        ref={ref}
+        className={`input-field ${
+          error
+            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+            : ""
+        } ${className}`}
+        {...props}
+      />
+
+      {error && (
+        <p className="mt-1 text-xs text-red-400">
+          {error}
+        </p>
+      )}
+    </div>
+  )
 );
+
+Input.displayName = "Input";
 
 // ── Textarea ─────────────────────────────────────────────────────────────────
-export const Textarea = ({ label, error, className = '', rows = 4, ...props }) => (
-  <div className="w-full">
-    {label && <label className="block text-sm font-medium text-slate-300 mb-1.5">{label}</label>}
-    <textarea
-      rows={rows}
-      className={`input-field resize-none ${error ? 'border-red-500' : ''} ${className}`}
-      {...props}
-    />
-    {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
-  </div>
+
+
+export const Textarea = forwardRef(
+  ({ label, error, className = "", rows = 4, ...props }, ref) => (
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-slate-300 mb-1.5">
+          {label}
+        </label>
+      )}
+
+      <textarea
+        ref={ref}
+        rows={rows}
+        className={`input-field resize-none ${
+          error ? "border-red-500" : ""
+        } ${className}`}
+        {...props}
+      />
+
+      {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
+    </div>
+  )
 );
 
+Textarea.displayName = "Textarea";
 // ── Select ────────────────────────────────────────────────────────────────────
-export const Select = ({ label, error, options = [], className = '', ...props }) => (
-  <div className="w-full">
-    {label && <label className="block text-sm font-medium text-slate-300 mb-1.5">{label}</label>}
-    <select className={`input-field ${error ? 'border-red-500' : ''} ${className}`} {...props}>
-      {options.map(({ value, label }) => (
-        <option key={value} value={value}>{label}</option>
-      ))}
-    </select>
-    {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
-  </div>
+export const Select = forwardRef(
+  ({ label, error, options = [], className = "", ...props }, ref) => (
+    <div className="w-full">
+      {label && (
+        <label className="block text-sm font-medium text-slate-300 mb-1.5">
+          {label}
+        </label>
+      )}
+
+      <select
+        ref={ref}
+        className={`input-field ${
+          error ? "border-red-500" : ""
+        } ${className}`}
+        {...props}
+      >
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
+
+      {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
+    </div>
+  )
 );
 
+Select.displayName = "Select";
 // ── Spinner ───────────────────────────────────────────────────────────────────
 export const Spinner = ({ size = 'md', className = '' }) => {
   const sizes = { sm: 'w-4 h-4 border-2', md: 'w-8 h-8 border-3', lg: 'w-12 h-12 border-4' };

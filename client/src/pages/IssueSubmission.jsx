@@ -83,6 +83,7 @@ const IssueSubmission = () => {
                     ]}
                     {...register('category', { required: 'Category is required' })}
                   />
+                  
                   <Select
                     label="Urgency"
                     options={[
