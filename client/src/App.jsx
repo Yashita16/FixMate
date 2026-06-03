@@ -4,7 +4,7 @@ import RoleRoute from './routes/RoleRoute.jsx';
 
 import Landing from './pages/Landing.jsx';
 import Login from './pages/Login.jsx';
-import Signup from './pages/Signup.jsx';
+import Signup from './pages/SignUp.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 import ResetPassword from './pages/ResetPassword.jsx';
 import Dashboard from './pages/Dashboard.jsx';
